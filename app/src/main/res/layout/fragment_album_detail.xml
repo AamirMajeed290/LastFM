@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/large_album_height"
+        android:minWidth="@dimen/large_album_width"
+        android:layout_margin="@dimen/l_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/detail_image"
+        app:layout_constraintHorizontal_bias="0.25"/>
+
+    <TextView
+        android:id="@+id/detail_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxl_margin"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@id/detail_name"
+        app:layout_constraintTop_toBottomOf="@id/detail_image" />
+
+</android.support.constraint.ConstraintLayout>
