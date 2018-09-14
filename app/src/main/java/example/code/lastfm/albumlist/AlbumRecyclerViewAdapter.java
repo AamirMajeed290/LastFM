@@ -1,6 +1,7 @@
 package example.code.lastfm.albumlist;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,19 +22,20 @@ public class AlbumRecyclerViewAdapter extends RecyclerView.Adapter<AlbumRecycler
 
     private List<Album> albums;
 
-    public AlbumRecyclerViewAdapter(List<Album> items) {
+    AlbumRecyclerViewAdapter(List<Album> items) {
         albums = items;
     }
 
+    @NonNull
     @Override
-    public AlbumViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AlbumViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.album_item_row, parent, false);
         return new AlbumViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final AlbumViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final AlbumViewHolder holder, int position) {
         Album currentAlbum = albums.get(position);
         String url = "";
         if(currentAlbum != null) {
@@ -58,7 +60,7 @@ public class AlbumRecyclerViewAdapter extends RecyclerView.Adapter<AlbumRecycler
         public final TextView name;
         public final TextView artist;
 
-        public AlbumViewHolder(View view) {
+        AlbumViewHolder(View view) {
             super(view);
             image = view.findViewById(R.id.image);
             name = view.findViewById(R.id.name);

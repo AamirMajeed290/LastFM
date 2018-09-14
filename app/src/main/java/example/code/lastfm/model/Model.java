@@ -3,7 +3,7 @@ package example.code.lastfm.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Model {
-    Results results;
+    private Results results;
 
     @SerializedName("results")
     public Results getResults() {

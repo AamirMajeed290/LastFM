@@ -32,8 +32,4 @@ public class AlbumListPresenter implements  AlbumListContract.Presenter, OnAlbum
         view.displayError(error);
     }
 
-    @Override
-    public void start() {
-
-    }
 }

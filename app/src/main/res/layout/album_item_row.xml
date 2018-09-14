@@ -21,10 +21,9 @@
         android:layout_marginBottom="@dimen/m_margin"
         android:layout_marginStart="@dimen/xxl_margin"
         android:layout_marginTop="@dimen/s_margin"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -33,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/m_margin"
         android:layout_marginStart="@dimen/xxl_margin"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/name" />
 

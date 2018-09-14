@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import example.code.lastfm.R;
-import example.code.lastfm.model.Album;
 
 public class AlbumDetail extends AppCompatActivity {
+
+    AlbumDetailPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,9 @@ public class AlbumDetail extends AppCompatActivity {
         String name = getIntent().getStringExtra("name");
         String artist = getIntent().getStringExtra("artist");
         AlbumDetailFragment albumDetailFragment = (AlbumDetailFragment) getSupportFragmentManager().findFragmentById(R.id.album_detail_fragment);
+
         assert albumDetailFragment != null;
-        albumDetailFragment.setAlbum(image, name, artist);
+        presenter = new AlbumDetailPresenter(albumDetailFragment);
+        presenter.setAlbum(image, name, artist);
     }
 }

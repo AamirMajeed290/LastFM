@@ -85,7 +85,7 @@ public class Album implements Parcelable {
         this.name = in.readString();
         this.artist = in.readString();
         this.url = in.readString();
-        this.image = new ArrayList<Image>();
+        this.image = new ArrayList<>();
         in.readList(this.image, Image.class.getClassLoader());
         this.streamable = in.readString();
         this.mbid = in.readString();

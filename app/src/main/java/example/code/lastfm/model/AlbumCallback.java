@@ -1,5 +1,6 @@
 package example.code.lastfm.model;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import example.code.lastfm.albumlist.OnAlbumLoadedListener;
@@ -15,7 +16,7 @@ public class AlbumCallback implements Callback<Model> {
     }
 
     @Override
-    public void onResponse(Call<Model> call, Response<Model> response) {
+    public void onResponse(@NonNull Call<Model> call, @NonNull Response<Model> response) {
         if( response.isSuccessful() ) {
             Model model = response.body();
             if(model != null && model.getResults() != null &&
@@ -33,7 +34,7 @@ public class AlbumCallback implements Callback<Model> {
     }
 
     @Override
-    public void onFailure(Call<Model> call, Throwable t) {
+    public void onFailure(@NonNull Call<Model> call, @NonNull Throwable t) {
         Log.e("Call error:", t.getMessage());
     }
 

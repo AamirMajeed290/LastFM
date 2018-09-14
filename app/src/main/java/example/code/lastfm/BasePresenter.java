@@ -18,6 +18,4 @@ package example.code.lastfm;
 
 public interface BasePresenter {
 
-    void start();
-
 }

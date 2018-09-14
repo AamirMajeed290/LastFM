@@ -1,6 +1,7 @@
 package example.code.lastfm.albumDetail;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import example.code.lastfm.R;
-import example.code.lastfm.model.Album;
 
 public class AlbumDetailFragment extends Fragment implements AlbumDetailContract.View {
 
@@ -31,7 +31,7 @@ public class AlbumDetailFragment extends Fragment implements AlbumDetailContract
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_album_detail, container, false);
